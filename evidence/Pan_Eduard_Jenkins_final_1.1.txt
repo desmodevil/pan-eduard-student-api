@@ -1,0 +1,220 @@
+Started by user Eduard Pan
+
+Obtained Jenkinsfile from git https://github.com/desmodevil/pan-eduard-student-api.git
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on Jenkins
+ in /var/lib/jenkins/workspace/Pan_Eduard_Student_API
+[Pipeline] {
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] timestamps
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Checkout)
+[Pipeline] checkout
+21:08:22  Selected Git installation does not exist. Using Default
+21:08:22  The recommended git tool is: NONE
+21:08:22  No credentials specified
+21:08:22   > git rev-parse --resolve-git-dir /var/lib/jenkins/workspace/Pan_Eduard_Student_API/.git # timeout=10
+21:08:22  Fetching changes from the remote Git repository
+21:08:22   > git config remote.origin.url https://github.com/desmodevil/pan-eduard-student-api.git # timeout=10
+21:08:22  Fetching upstream changes from https://github.com/desmodevil/pan-eduard-student-api.git
+21:08:22   > git --version # timeout=10
+21:08:22   > git --version # 'git version 2.53.0'
+21:08:22   > git fetch --tags --force --progress -- https://github.com/desmodevil/pan-eduard-student-api.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+21:08:23   > git rev-parse refs/remotes/origin/main^{commit} # timeout=10
+21:08:23  Checking out Revision 18d60e451738067180259ca567e24672be8305f7 (refs/remotes/origin/main)
+21:08:23   > git config core.sparsecheckout # timeout=10
+21:08:23   > git checkout -f 18d60e451738067180259ca567e24672be8305f7 # timeout=10
+21:08:23  Commit message: "Pan Eduard: finalize verification report and Jenkins evidence"
+21:08:23  First time build. Skipping changelog.
+[Pipeline] echo
+21:08:23  Pan Eduard | IT2-2312
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Build)
+[Pipeline] sh
+21:08:23  + chmod +x gradlew
+21:08:23  + ./gradlew --no-daemon classes bootJar
+21:08:25  To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.14.3/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+21:08:27  Daemon will be stopped at the end of the build 
+
+21:08:39  > Task :compileJava UP-TO-DATE
+21:08:39  > Task :processResources UP-TO-DATE
+21:08:39  > Task :classes UP-TO-DATE
+21:08:39  > Task :resolveMainClassName UP-TO-DATE
+
+21:08:40  > Task :bootJar UP-TO-DATE
+21:08:40  
+21:08:40  BUILD SUCCESSFUL in 16s
+21:08:40  4 actionable tasks: 4 up-to-date
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Test)
+[Pipeline] sh
+
+21:08:40  + ./gradlew --no-daemon test
+
+21:08:41  To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.14.3/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+
+21:08:44  Daemon will be stopped at the end of the build 
+
+21:08:52  > Task :compileJava UP-TO-DATE
+21:08:52  > Task :processResources UP-TO-DATE
+21:08:52  > Task :classes UP-TO-DATE
+21:08:52  > Task :compileTestJava UP-TO-DATE
+21:08:52  > Task :processTestResources UP-TO-DATE
+21:08:52  > Task :testClasses UP-TO-DATE
+21:08:52  > Task :test UP-TO-DATE
+21:08:52  
+21:08:52  BUILD SUCCESSFUL in 10s
+21:08:52  5 actionable tasks: 5 up-to-date
+Post stage
+[Pipeline] junit
+21:08:52  Recording test results
+21:08:52  [Checks API] No suitable checks publisher found.
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Docker Build)
+[Pipeline] sh
+21:08:52  + docker build -t pan-eduard-student-api:v1.1-pan-eduard .
+21:08:52  DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+21:08:52              Install the buildx component to build images with BuildKit:
+21:08:52              https://docs.docker.com/go/buildx/
+21:08:52  
+21:08:52  Sending build context to Docker daemon  113.7kB
+21:08:52  
+21:08:52  Step 1/14 : FROM eclipse-temurin:17-jdk AS build
+
+21:08:52   ---> 91011320978c
+21:08:52  Step 2/14 : WORKDIR /workspace
+21:08:52   ---> Using cache
+21:08:52   ---> aa5428b2df27
+21:08:52  Step 3/14 : COPY gradlew .
+21:08:52   ---> Using cache
+21:08:52   ---> 41e0e792b4c1
+21:08:52  Step 4/14 : COPY gradle gradle
+21:08:52   ---> Using cache
+21:08:52   ---> 3608abda0910
+21:08:52  Step 5/14 : RUN chmod 755 gradlew
+21:08:52   ---> Using cache
+21:08:52   ---> 929243da0ad2
+21:08:52  Step 6/14 : COPY settings.gradle build.gradle ./
+21:08:52   ---> Using cache
+21:08:52   ---> fea87256dda3
+21:08:52  Step 7/14 : COPY src src
+21:08:52   ---> Using cache
+21:08:52   ---> 8fd632c9a623
+21:08:52  Step 8/14 : RUN ./gradlew --no-daemon bootJar
+21:08:53   ---> Using cache
+21:08:53   ---> 058b8affb214
+21:08:53  Step 9/14 : FROM eclipse-temurin:17-jre
+21:08:53   ---> 4faa9eaf4405
+21:08:53  Step 10/14 : WORKDIR /app
+21:08:53   ---> Using cache
+21:08:53   ---> 30431d156d1e
+21:08:53  Step 11/14 : COPY --from=build /workspace/build/libs/app.jar app.jar
+21:08:53   ---> Using cache
+21:08:53   ---> c846edc589fa
+21:08:53  Step 12/14 : USER 10001:10001
+21:08:53   ---> Using cache
+21:08:53   ---> 64b3e19f58a6
+21:08:53  Step 13/14 : EXPOSE 8080
+21:08:53   ---> Using cache
+21:08:53   ---> 2f1a51b24d13
+21:08:53  Step 14/14 : ENTRYPOINT ["java","-jar","app.jar"]
+21:08:53   ---> Using cache
+21:08:53   ---> eaedc5843372
+21:08:53  Successfully built eaedc5843372
+21:08:53  Successfully tagged pan-eduard-student-api:v1.1-pan-eduard
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Verify)
+[Pipeline] sh
+21:08:53  + docker image inspect pan-eduard-student-api:v1.1-pan-eduard
+21:08:53  [
+21:08:53      {
+21:08:53          "Architecture": "amd64",
+21:08:53          "Config": {
+21:08:53              "Entrypoint": [
+21:08:53                  "java",
+21:08:53                  "-jar",
+21:08:53                  "app.jar"
+21:08:53              ],
+21:08:53              "Env": [
+21:08:53                  "PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+21:08:53                  "JAVA_HOME=/opt/java/openjdk",
+21:08:53                  "LANG=en_US.UTF-8",
+21:08:53                  "LANGUAGE=en_US:en",
+21:08:53                  "LC_ALL=en_US.UTF-8",
+21:08:53                  "JAVA_VERSION=jdk-17.0.20.1+1"
+21:08:53              ],
+21:08:53              "ExposedPorts": {
+21:08:53                  "8080/tcp": {}
+21:08:53              },
+21:08:53              "Labels": {
+21:08:53                  "org.opencontainers.image.created": "2026-10-25T10:26:07.538865+00:00",
+21:08:53                  "org.opencontainers.image.description": "The Ubuntu container image maintained by Canonical\n\nUbuntu is a Debian-based Linux operating system that runs from the desktop to the cloud, to all your internet connected things.\nIt is the world's most popular operating system across public clouds and OpenStack clouds.\nIt is the number one platform for containers; from Docker to Kubernetes to LXD, Ubuntu can run your containers at scale.\nFast, secure and simple, Ubuntu powers millions of PCs worldwide.\n",
+21:08:53                  "org.opencontainers.image.title": "ubuntu",
+21:08:53                  "org.opencontainers.image.version": "26.04"
+21:08:53              },
+21:08:53              "User": "10001:10001",
+21:08:53              "WorkingDir": "/app"
+21:08:53          },
+21:08:53          "Created": "2026-10-29T21:07:41.383193788Z",
+21:08:53          "Descriptor": {
+21:08:53              "digest": "sha256:eaedc5843372d769f272101acf11a6d891586e12d72970e66eaa5aba7e6f069b",
+21:08:53              "mediaType": "application/vnd.oci.image.manifest.v1+json",
+21:08:53              "size": 2051
+21:08:53          },
+21:08:53          "Id": "sha256:eaedc5843372d769f272101acf11a6d891586e12d72970e66eaa5aba7e6f069b",
+21:08:53          "Metadata": {
+21:08:53              "LastTagTime": "2026-10-29T21:07:41.823050137Z"
+21:08:53          },
+21:08:53          "Os": "linux",
+21:08:53          "Parent": "sha256:2f1a51b24d136568d97339c96c838903adb26371c7f4b175dec6441f19c3969d",
+21:08:53          "RepoDigests": [
+21:08:53              "pan-eduard-student-api@sha256:eaedc5843372d769f272101acf11a6d891586e12d72970e66eaa5aba7e6f069b"
+21:08:53          ],
+21:08:53          "RepoTags": [
+21:08:53              "pan-eduard-student-api:v1.1-pan-eduard"
+21:08:53          ],
+21:08:53          "RootFS": {
+21:08:53              "Layers": [
+21:08:53                  "sha256:5cac300e390e2fd748b258618f403b7813229929ad6de903b0c52a210a930824",
+21:08:53                  "sha256:5f4be2c3badedfd7149d008a4902427c98e708c70031dc19b4264160a545df19",
+21:08:53                  "sha256:fffc970145d3d80bebde72200c6cc5c98e259dd36aa736cbd8d6f6d35db9cb2b",
+21:08:53                  "sha256:5ae5ab4535f97667373158e2150216b53c621c9e0aa3d5dbd911dc6b6003658a",
+21:08:53                  "sha256:b98d126d8fe835ca1f9a9d84467f8cc5cbf15f85a316d050f2f473dbc500bb41",
+21:08:53                  "sha256:7afb7ab8bdb914e132b3476b983f07f1fb2bc101fb991a2d1327b63da4b81f8b",
+21:08:53                  "sha256:fa49754f34334569762efe6430e07f9d587ed5d0edce081efe9dc47df3192b54",
+21:08:53                  "sha256:f5a34ce16fc4a90c3865e1a93eabb3a4ba489b8a31cf62a1329dadb328e7db51"
+21:08:53              ],
+21:08:53              "Type": "layers"
+21:08:53          },
+21:08:53          "Size": 160461743
+21:08:53      }
+21:08:53  ]
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Declarative: Post Actions)
+
+[Pipeline] archiveArtifacts
+21:08:54  Archiving artifacts
+21:08:54  Recording fingerprints
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // timestamps
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Finished: SUCCESS

@@ -26,7 +26,8 @@
 Не передавать OVA публично: виртуальный диск содержит локальные пароли и настройки Jenkins. Преподавателю исходники и отчёт передаются отдельно.
 
 ## Перед сдачей
-- Для точного соответствия переименовать GitHub repo в pan-eduard-student-api и обновить origin и оба Jenkins SCM URL.
-- Дождаться успешной Jenkins-сборки версии 1.1 и сохранить Console Output.
+- Репозиторий уже переименован: https://github.com/desmodevil/pan-eduard-student-api. Основной Jenkins проверен с новым URL.
+- Успешная Jenkins-сборка версии 1.1 сохранена в evidence/Pan_Eduard_Jenkins_final_1.1.txt.
 - Сохранить скриншоты build history, тестов и Docker ps при необходимости формата сдачи.
 - Убедиться, что архив и GitHub содержат актуальный VERIFICATION.md и четыре Jenkins журнала.
+
