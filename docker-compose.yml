@@ -1,0 +1,31 @@
+name: pan-eduard-student-api
+services:
+  app:
+    build: .
+    image: pan-eduard-student-api:v1.0-pan-eduard
+    ports: ["127.0.0.1:8080:8080"]
+    environment:
+      DB_URL: jdbc:postgresql://db:5432/pan_eduard
+      DB_USER: pan_eduard
+      DB_PASSWORD: ${DB_PASSWORD:?Set DB_PASSWORD in .env}
+    depends_on:
+      db:
+        condition: service_healthy
+    networks: [pan-eduard-network]
+  db:
+    image: postgres:17
+    environment:
+      POSTGRES_DB: pan_eduard
+      POSTGRES_USER: pan_eduard
+      POSTGRES_PASSWORD: ${DB_PASSWORD:?Set DB_PASSWORD in .env}
+    volumes: ["pan-eduard-data:/var/lib/postgresql/data"]
+    networks: [pan-eduard-network]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U pan_eduard -d pan_eduard"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+volumes:
+  pan-eduard-data:
+networks:
+  pan-eduard-network:
