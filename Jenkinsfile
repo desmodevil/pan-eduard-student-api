@@ -2,7 +2,7 @@ pipeline {
  agent { label 'docker-java17' }
  options { skipDefaultCheckout(true); disableConcurrentBuilds(); timestamps() }
  triggers { pollSCM('H/5 * * * *') }
- environment { IMAGE = 'pan-eduard-student-api:v1.0-pan-eduard' }
+ environment { JAVA_HOME = '/usr/lib/jvm/java-17-openjdk-amd64'; IMAGE = 'pan-eduard-student-api:v1.0-pan-eduard' }
  stages {
   stage('Checkout') { steps { checkout scm; echo 'Pan Eduard | IT2-2312' } }
   stage('Build') { steps { sh 'chmod +x gradlew && ./gradlew --no-daemon classes bootJar' } }
