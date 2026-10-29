@@ -1,6 +1,6 @@
 # Pan Eduard Student API
 Student: Pan Eduard | Group: IT2-2312
-Documentation status: submission guide
+Documentation status: submission guide and defense notes
 
 Java 17+, Spring Boot 3.5.7, Gradle wrapper 8.14.3, PostgreSQL 17.
 Build: ./gradlew clean test bootJar (Windows: gradlew.bat).
@@ -36,4 +36,5 @@ Polling H/5 активируется после первого ручного з
 Совместимость: https://docs.spring.io/spring-boot/3.5/system-requirements.html
 
 Feature Pan Eduard: GET /api/students returns records ordered by ID for reproducible demonstrations.
+
 
