@@ -40,3 +40,5 @@ Feature Pan Eduard: GET /api/students returns records ordered by ID for reproduc
 
 
 CI check: Pan Eduard, IT2-2312 — automatic polling trigger.
+
+CI check: Pan Eduard, IT2-2312 — automatic polling trigger.
