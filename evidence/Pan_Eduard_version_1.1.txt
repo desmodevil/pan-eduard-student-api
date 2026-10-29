@@ -1,0 +1,10 @@
+HTTP/1.1 200 
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Thu, 29 Oct 2026 21:01:19 GMT
+
+{"version":"1.1-pan-eduard","student":"Pan Eduard","group":"IT2-2312"}
+Image=sha256:3d8321c8e0f0139cd2fcbfc3db4a43c9d040b103182cb63fc10dc60d1ae17c4e Created=2026-10-29T21:00:12.717921781Z Size=160462519
+NAME                           IMAGE                                    COMMAND                  SERVICE   CREATED              STATUS                    PORTS
+pan-eduard-student-api-app-1   pan-eduard-student-api:v1.1-pan-eduard   "java -jar app.jar"      app       About a minute ago   Up About a minute         127.0.0.1:8081->8080/tcp
+pan-eduard-student-api-db-1    postgres:17                              "docker-entrypoint.s…"   db        5 hours ago          Up 18 minutes (healthy)   5432/tcp

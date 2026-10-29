@@ -8,7 +8,7 @@ pipeline {
     triggers { pollSCM('H/5 * * * *') }
     environment {
         JAVA_HOME = '/usr/lib/jvm/java-17-openjdk-amd64'
-        IMAGE = 'pan-eduard-student-api:v1.0-pan-eduard'
+        IMAGE = 'pan-eduard-student-api:v1.1-pan-eduard'
     }
     stages {
         stage('Checkout') {

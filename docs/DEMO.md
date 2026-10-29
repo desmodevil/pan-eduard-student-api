@@ -32,18 +32,18 @@ Email локального Git взят из существующей настр
 
 Дождаться HTTP 200 на /actuator/health. Далее Bash/curl:
 
-    curl -i -H 'Content-Type: application/json' -d '{"name":"Pan Eduard","groupName":"IT2-2312","email":"pan@example.com"}' http://localhost:8080/api/students
-    curl -i http://localhost:8080/api/students
+    curl -i -H 'Content-Type: application/json' -d '{"name":"Pan Eduard","groupName":"IT2-2312","email":"pan@example.com"}' http://localhost:8081/api/students
+    curl -i http://localhost:8081/api/students
 
 Вставить фактический ID из ответа вместо ID ниже:
 
-    curl -i http://localhost:8080/api/students/ID
-    curl -i -X PUT -H 'Content-Type: application/json' -d '{"name":"Pan Eduard","groupName":"IT2-2312-updated","email":"pan@example.com"}' http://localhost:8080/api/students/ID
+    curl -i http://localhost:8081/api/students/ID
+    curl -i -X PUT -H 'Content-Type: application/json' -d '{"name":"Pan Eduard","groupName":"IT2-2312-updated","email":"pan@example.com"}' http://localhost:8081/api/students/ID
     docker compose down
     docker compose up -d
-    curl -i http://localhost:8080/api/students/ID
-    curl -i -X DELETE http://localhost:8080/api/students/ID
-    curl -i http://localhost:8080/api/students/ID
+    curl -i http://localhost:8081/api/students/ID
+    curl -i -X DELETE http://localhost:8081/api/students/ID
+    curl -i http://localhost:8081/api/students/ID
 
 После down/up запись должна сохраниться; дождаться готовности перед GET. Не использовать down -v: он удаляет данные.
 Последний GET должен вернуть 404. Сохранить все статусы и JSON в evidence.

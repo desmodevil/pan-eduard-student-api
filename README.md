@@ -11,9 +11,9 @@ Tests use H2; actual PostgreSQL requires Docker integration checks.
 2. cp .env.example .env — заменить пароль в .env.
 3. docker compose up -d --build
 4. docker compose ps; docker compose logs app
-5. curl http://localhost:8080/actuator/health
+5. curl http://localhost:8081/actuator/health
 
-Адрес проекта pan-eduard-student-api: http://localhost:8080; внутри сети http://app:8080.
+Адрес проекта pan-eduard-student-api: http://localhost:8081; внутри сети http://app:8080.
 POST/GET /api/students; GET/PUT/DELETE /api/students/{id}.
 JSON: {"name":"Pan Eduard","groupName":"IT2-2312","email":"pan@example.com"}.
 POST: 201 + Location; DELETE: 204; отсутствующий ID: 404; невалидные данные: 400.

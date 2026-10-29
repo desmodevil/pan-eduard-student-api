@@ -6,7 +6,7 @@ import org.springframework.http.*; import java.net.URI; import java.util.*;
  private final StudentRepository repo;
  public StudentController(StudentRepository r){repo=r;}
  public record Input(@NotBlank @Size(max=100) String name,@NotBlank @Size(max=50) String groupName,@NotBlank @Email @Size(max=200) String email){}
- @GetMapping("/") public Map<String,String> info(){return Map.of("student","Pan Eduard","group","IT2-2312","version","1.0-pan-eduard");}
+ @GetMapping("/") public Map<String,String> info(){return Map.of("student","Pan Eduard","group","IT2-2312","version","1.1-pan-eduard");}
  @GetMapping("/api/students") public List<Student> all(){return repo.findAll(org.springframework.data.domain.Sort.by("id"));}
  @GetMapping("/api/students/{id}") public Student one(@PathVariable Long id){return repo.findById(id).orElseThrow(()->new ResponseStatusException(HttpStatus.NOT_FOUND,"Student not found"));}
  private Student assign(Student s,Input i){s.name=i.name();s.groupName=i.groupName();s.email=i.email();return repo.save(s);}
