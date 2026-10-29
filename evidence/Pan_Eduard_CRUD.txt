@@ -1,0 +1,71 @@
+  % Total    % Received % Xferd  Average Speed  Time    Time    Time   Current
+                                 Dload  Upload  Total   Spent   Left   Speed
+  0      0   0      0   0      0      0      0                              0100    147   0     77 100     70    332    302                              0100    147   0     77 100     70    332    301                              0100    147   0     77 100     70    332    301                              0
+HTTP/1.1 201 
+Location: /api/students/1
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Thu, 29 Oct 2026 16:22:52 GMT
+
+{"id":1,"name":"Pan Eduard","groupName":"IT2-2312","email":"pan@example.com"}
+  % Total    % Received % Xferd  Average Speed  Time    Time    Time   Current
+                                 Dload  Upload  Total   Spent   Left   Speed
+  0      0   0      0   0      0      0      0                              0100     79   0     79   0      0    612      0                              0100     79   0     79   0      0    612      0                              0100     79   0     79   0      0    612      0                              0
+HTTP/1.1 200 
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Thu, 29 Oct 2026 16:22:52 GMT
+
+[{"id":1,"name":"Pan Eduard","groupName":"IT2-2312","email":"pan@example.com"}]
+HTTP/1.1 200 
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Thu, 29 Oct 2026 16:23:22 GMT
+
+{"id":1,"name":"Pan Eduard","groupName":"IT2-2312","email":"pan@example.com"}
+HTTP/1.1 200 
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Thu, 29 Oct 2026 16:23:22 GMT
+
+{"id":1,"name":"Pan Eduard","groupName":"IT2-2312-updated","email":"pan@example.com"}
+ Container pan-eduard-student-api-app-1  Stopping
+ Container pan-eduard-student-api-app-1  Stopped
+ Container pan-eduard-student-api-app-1  Removing
+ Container pan-eduard-student-api-app-1  Removed
+ Container pan-eduard-student-api-db-1  Stopping
+ Container pan-eduard-student-api-db-1  Stopped
+ Container pan-eduard-student-api-db-1  Removing
+ Container pan-eduard-student-api-db-1  Removed
+ Network pan-eduard-student-api_pan-eduard-network  Removing
+ Network pan-eduard-student-api_pan-eduard-network  Removed
+ Network pan-eduard-student-api_pan-eduard-network  Creating
+ Network pan-eduard-student-api_pan-eduard-network  Created
+ Container pan-eduard-student-api-db-1  Creating
+ Container pan-eduard-student-api-db-1  Created
+ Container pan-eduard-student-api-app-1  Creating
+ Container pan-eduard-student-api-app-1  Created
+ Container pan-eduard-student-api-db-1  Starting
+ Container pan-eduard-student-api-db-1  Started
+ Container pan-eduard-student-api-db-1  Waiting
+ Container pan-eduard-student-api-db-1  Healthy
+ Container pan-eduard-student-api-app-1  Starting
+ Container pan-eduard-student-api-app-1  Started
+HTTP/1.1 200 
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Thu, 29 Oct 2026 16:23:38 GMT
+
+{"id":1,"name":"Pan Eduard","groupName":"IT2-2312-updated","email":"pan@example.com"}
+DELETE student 1
+HTTP/1.1 204 
+Date: Thu, 29 Oct 2026 16:23:58 GMT
+
+
+GET deleted student 1
+HTTP/1.1 404 
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Thu, 29 Oct 2026 16:23:58 GMT
+
+{"timestamp":"2026-10-29T16:23:58.727+00:00","status":404,"error":"Not Found","path":"/api/students/1"}

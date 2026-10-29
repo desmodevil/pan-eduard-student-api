@@ -1,0 +1,398 @@
+Student: Pan Eduard | IT2-2312
+2026-10-29T16:15:10+00:00
+vboxuser
+PRETTY_NAME="Ubuntu 26.04.1 LTS"
+NAME="Ubuntu"
+VERSION_ID="26.04"
+VERSION="26.04.1 LTS (Resolute Raccoon)"
+VERSION_CODENAME=resolute
+ID=ubuntu
+ID_LIKE=debian
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+UBUNTU_CODENAME=resolute
+LOGO=ubuntu-logo
+Linux Ubuntu 7.0.0-38-generic #38-Ubuntu SMP PREEMPT_DYNAMIC Fri Sep  4 09:10:14 UTC 2026 x86_64 GNU/Linux
+Architecture:                            x86_64
+CPU op-mode(s):                          32-bit, 64-bit
+Address sizes:                           39 bits physical, 48 bits virtual
+Byte Order:                              Little Endian
+CPU(s):                                  3
+On-line CPU(s) list:                     0-2
+Vendor ID:                               GenuineIntel
+Model name:                              12th Gen Intel(R) Core(TM) i5-12400F
+CPU family:                              6
+Model:                                   151
+Thread(s) per core:                      1
+Core(s) per socket:                      3
+Socket(s):                               1
+Stepping:                                5
+BogoMIPS:                                4991.99
+Flags:                                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx rdtscp lm constant_tsc rep_good nopl xtopology nonstop_tsc cpuid tsc_known_freq pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch ibrs_enhanced fsgsbase bmi1 avx2 bmi2 invpcid rdseed adx clflushopt sha_ni arat md_clear flush_l1d arch_capabilities
+Hypervisor vendor:                       KVM
+Virtualization type:                     full
+L1d cache:                               144 KiB (3 instances)
+L1i cache:                               96 KiB (3 instances)
+L2 cache:                                3.8 MiB (3 instances)
+L3 cache:                                54 MiB (3 instances)
+NUMA node(s):                            1
+NUMA node0 CPU(s):                       0-2
+Vulnerability Gather data sampling:      Not affected
+Vulnerability Ghostwrite:                Not affected
+Vulnerability Indirect target selection: Mitigation; Aligned branch/return thunks
+Vulnerability Itlb multihit:             Not affected
+Vulnerability L1tf:                      Not affected
+Vulnerability Mds:                       Not affected
+Vulnerability Meltdown:                  Not affected
+Vulnerability Mmio stale data:           Not affected
+Vulnerability Old microcode:             Not affected
+Vulnerability Reg file data sampling:    Not affected
+Vulnerability Retbleed:                  Mitigation; Enhanced IBRS
+Vulnerability Spec rstack overflow:      Not affected
+Vulnerability Spec store bypass:         Vulnerable
+Vulnerability Spectre v1:                Mitigation; usercopy/swapgs barriers and __user pointer sanitization
+Vulnerability Spectre v2:                Mitigation; Enhanced / Automatic IBRS; PBRSB-eIBRS SW sequence; BHI SW loop, KVM SW loop
+Vulnerability Srbds:                     Not affected
+Vulnerability Tsa:                       Not affected
+Vulnerability Tsx async abort:           Not affected
+Vulnerability Vmscape:                   Not affected
+               total        used        free      shared  buff/cache   available
+Mem:           4.3Gi       1.8Gi       719Mi        29Mi       2.1Gi       2.5Gi
+Swap:             0B          0B          0B
+Filesystem      Size  Used Avail Use% Mounted on
+tmpfs           881M  2.2M  878M   1% /run
+/dev/sda2        25G  7.7G   16G  34% /
+tmpfs           2.2G     0  2.2G   0% /dev/shm
+tmpfs           2.2G  4.8M  2.2G   1% /tmp
+tmpfs           441M   84K  440M   1% /run/user/1000
+none            1.0M     0  1.0M   0% /run/credentials/systemd-journald.service
+none            1.0M     0  1.0M   0% /run/credentials/systemd-resolved.service
+Filesystem     Avail Mounted on
+tmpfs           878M /run
+/dev/sda2        16G /
+tmpfs           2.2G /dev/shm
+tmpfs           2.2G /tmp
+tmpfs           440M /run/user/1000
+none            1.0M /run/credentials/systemd-journald.service
+none            1.0M /run/credentials/systemd-resolved.service
+-rw-rw-r-- 1 vboxuser vboxuser 2408 Oct 29 16:15 backups/Pan_Eduard_README_20261029_161510.md
+-rwxr--r-- 1 vboxuser vboxuser  282 Oct 29 14:11 scripts/Pan_Eduard_system_report.sh
+.
+./.gradle
+./.gradle/8.14.3
+./.gradle/8.14.3/expanded
+./.gradle/8.14.3/fileHashes
+./.gradle/8.14.3/fileChanges
+./.gradle/8.14.3/vcsMetadata
+./.gradle/8.14.3/gc.properties
+./.gradle/8.14.3/checksums
+./.gradle/vcs-1
+./.gradle/vcs-1/gc.properties
+./.gradle/buildOutputCleanup
+./.gradle/buildOutputCleanup/buildOutputCleanup.lock
+./.gradle/buildOutputCleanup/cache.properties
+./scripts
+./scripts/Pan_Eduard_linux_demo.sh
+./scripts/Pan_Eduard_system_report.sh
+./.gitignore
+./settings.gradle
+./.dockerignore
+./.gitattributes
+./.env.example
+./Jenkinsfile
+./src
+./src/test
+./src/test/java
+./src/test/resources
+./src/main
+./src/main/java
+./src/main/resources
+./docker-compose.yml
+./backups
+./backups/Pan_Eduard_README.md
+./backups/Pan_Eduard_README_20261029_161510.md
+./backups/.gitkeep
+./backups/Pan_Eduard_README_20261029_151814.md
+./gradlew
+./evidence
+./evidence/Pan_Eduard_build.txt
+./evidence/Pan_Eduard_gradle_attempt.txt
+./evidence/Pan_Eduard_Ubuntu.txt
+./evidence/VERIFICATION.md
+./evidence/Pan_Eduard_git_history.txt
+./evidence/Pan_Eduard_conflict_before.txt
+./evidence/Pan_Eduard_git_conflict.txt
+./README.md
+./gradle
+./gradle/wrapper
+./gradle/wrapper/gradle-wrapper.jar
+./gradle/wrapper/gradle-wrapper.properties
+./gradlew.bat
+./build.gradle
+./Dockerfile
+./docs
+./docs/DEFENSE.md
+./docs/DEMO.md
+./.git
+./logs
+./logs/.gitkeep
+./logs/Pan_Eduard_system_report.log
+./logs/Pan_Eduard_log_analysis.txt
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.1  0.3  26152 17332 ?        Ss   15:14   0:06 /usr/lib/systemd/systemd --switched-root --system --deserialize=51
+root           2  0.0  0.0      0     0 ?        S    15:14   0:00 [kthreadd]
+root           3  0.0  0.0      0     0 ?        S    15:14   0:00 [pool_workqueue_release]
+root           4  0.0  0.0      0     0 ?        I<   15:14   0:00 [kworker/R-rcu_gp]
+root           5  0.0  0.0      0     0 ?        I<   15:14   0:00 [kworker/R-sync_wq]
+root           6  0.0  0.0      0     0 ?        I<   15:14   0:00 [kworker/R-kvfree_rcu_reclaim]
+root           7  0.0  0.0      0     0 ?        I<   15:14   0:00 [kworker/R-slub_flushwq]
+root           8  0.0  0.0      0     0 ?        I<   15:14   0:00 [kworker/R-netns]
+root          10  0.0  0.0      0     0 ?        I<   15:14   0:00 [kworker/0:0H-kblockd]
+root          12  0.0  0.0      0     0 ?        I    15:14   0:00 [kworker/u12:0-netns]
+root          13  0.0  0.0      0     0 ?        I<   15:14   0:00 [kworker/R-mm_percpu_wq]
+root          14  0.0  0.0      0     0 ?        S    15:14   0:00 [ksoftirqd/0]
+root          15  0.0  0.0      0     0 ?        I    15:14   0:01 [rcu_preempt]
+root          16  0.0  0.0      0     0 ?        S    15:14   0:00 [rcu_exp_par_gp_kthread_worker/0]
+root          17  0.0  0.0      0     0 ?        S    15:14   0:00 [rcu_exp_gp_kthread_worker]
+root          18  0.0  0.0      0     0 ?        S    15:14   0:00 [migration/0]
+root          19  0.0  0.0      0     0 ?        S    15:14   0:00 [kprobe-optimizer]
+root          20  0.0  0.0      0     0 ?        S    15:14   0:00 [idle_inject/0]
+root          21  0.0  0.0      0     0 ?        S    15:14   0:00 [cpuhp/0]
+root          22  0.0  0.0      0     0 ?        S    15:14   0:00 [cpuhp/1]
+root          23  0.0  0.0      0     0 ?        S    15:14   0:00 [idle_inject/1]
+root          24  0.0  0.0      0     0 ?        S    15:14   0:00 [migration/1]
+root          25  0.0  0.0      0     0 ?        S    15:14   0:00 [ksoftirqd/1]
+root          27  0.0  0.0      0     0 ?        I<   15:14   0:00 [kworker/1:0H-kblockd]
+root          28  0.0  0.0      0     0 ?        S    15:14   0:00 [cpuhp/2]
+root          29  0.0  0.0      0     0 ?        S    15:14   0:00 [idle_inject/2]
+root          30  0.0  0.0      0     0 ?        S    15:14   0:00 [migration/2]
+root          31  0.0  0.0      0     0 ?        S    15:14   0:00 [ksoftirqd/2]
+root          33  0.0  0.0      0     0 ?        I<   15:14   0:00 [kworker/2:0H-kblockd]
+root          37  0.0  0.0      0     0 ?        S    15:14   0:00 [kdevtmpfs]
+root          38  0.0  0.0      0     0 ?        I<   15:14   0:00 [kworker/R-inet_frag_wq]
+root          39  0.0  0.0      0     0 ?        I    15:14   0:00 [rcu_tasks_kthread]
+root          40  0.0  0.0      0     0 ?        I    15:14   0:00 [rcu_tasks_rude_kthread]
+root          41  0.0  0.0      0     0 ?        S    15:14   0:00 [kauditd]
+root          42  0.0  0.0      0     0 ?        S    15:14   0:00 [khungtaskd]
+root          43  0.0  0.0      0     0 ?        S    15:14   0:00 [oom_reaper]
+root          45  0.0  0.0      0     0 ?        I<   15:14   0:00 [kworker/R-writeback]
+root          46  0.0  0.0      0     0 ?        S    15:14   0:00 [kcompactd0]
+root          47  0.0  0.0      0     0 ?        I    15:14   0:00 [kworker/u13:2-flush-8:0]
+root          48  0.0  0.0      0     0 ?        SN   15:14   0:00 [ksmd]
+root          49  0.0  0.0      0     0 ?        SN   15:14   0:00 [khugepaged]
+root          50  0.0  0.0      0     0 ?        I<   15:14   0:00 [kworker/R-kblockd]
+root          51  0.0  0.0      0     0 ?        I<   15:14   0:00 [kworker/R-blkcg_punt_bio]
+root          52  0.0  0.0      0     0 ?        I<   15:14   0:00 [kworker/R-kintegrityd]
+root          53  0.0  0.0      0     0 ?        S    15:14   0:00 [irq/9-acpi]
+root          54  0.0  0.0      0     0 ?        I<   15:14   0:00 [kworker/R-tpm_dev_wq]
+root          55  0.0  0.0      0     0 ?        I<   15:14   0:00 [kworker/R-ata_sff]
+root          56  0.0  0.0      0     0 ?        I<   15:14   0:00 [kworker/R-md_bitmap]
+root          57  0.0  0.0      0     0 ?        I<   15:14   0:00 [kworker/R-md_llbitmap_io]
+root          58  0.0  0.0      0     0 ?        I<   15:14   0:00 [kworker/R-md_llbitmap_unplug]
+root          59  0.0  0.0      0     0 ?        I<   15:14   0:00 [kworker/R-edac-poller]
+root          60  0.0  0.0      0     0 ?        I<   15:14   0:00 [kworker/R-devfreq_wq]
+root          61  0.0  0.0      0     0 ?        S    15:14   0:00 [watchdogd]
+root          63  0.0  0.0      0     0 ?        I<   15:14   0:00 [kworker/R-quota_events_unbound]
+root          64  0.0  0.0      0     0 ?        I    15:14   0:00 [kworker/u15:1-events_unbound]
+root          65  0.0  0.0      0     0 ?        S    15:14   0:00 [kswapd0]
+root          66  0.0  0.0      0     0 ?        S    15:14   0:00 [ecryptfs-kthread]
+root          67  0.0  0.0      0     0 ?        I<   15:14   0:00 [kworker/R-kthrotld]
+root          69  0.0  0.0      0     0 ?        I<   15:14   0:00 [kworker/R-acpi_thermal_pm]
+root          70  0.0  0.0      0     0 ?        S    15:14   0:00 [scsi_eh_0]
+root          71  0.0  0.0      0     0 ?        I<   15:14   0:00 [kworker/R-scsi_tmf_0]
+root          72  0.0  0.0      0     0 ?        S    15:14   0:00 [scsi_eh_1]
+root          73  0.0  0.0      0     0 ?        I<   15:14   0:00 [kworker/R-scsi_tmf_1]
+root          75  0.0  0.0      0     0 ?        I    15:14   0:00 [kworker/u15:3-ext4-rsv-conversion]
+root          78  0.0  0.0      0     0 ?        I    15:14   0:00 [kworker/u14:1-events_unbound]
+root          79  0.0  0.0      0     0 ?        I<   15:14   0:00 [kworker/R-mld]
+root          80  0.0  0.0      0     0 ?        I<   15:14   0:00 [kworker/R-ipv6_addrconf]
+root          81  0.0  0.0      0     0 ?        I    15:14   0:00 [kworker/u12:1-ipv6_addrconf]
+root          82  0.0  0.0      0     0 ?        I<   15:14   0:00 [kworker/R-kstrp]
+root          85  0.0  0.0      0     0 ?        I<   15:14   0:00 [kworker/u16:0]
+root          86  0.0  0.0      0     0 ?        I<   15:14   0:00 [kworker/u17:0-ttm]
+root          87  0.0  0.0      0     0 ?        I<   15:14   0:00 [kworker/u18:0-ttm]
+root         100  0.0  0.0      0     0 ?        I<   15:14   0:00 [kworker/R-charger_manager]
+root         285  0.0  0.0      0     0 ?        I<   15:14   0:00 [kworker/R-iprt-VBoxWQueue]
+root         286  0.0  0.0      0     0 ?        S    15:14   0:00 [scsi_eh_2]
+root         287  0.0  0.0      0     0 ?        I<   15:14   0:00 [kworker/R-scsi_tmf_2]
+root         303  0.0  0.0      0     0 ?        S    15:14   0:00 [jbd2/sda2-8]
+root         304  0.0  0.0      0     0 ?        I<   15:14   0:00 [kworker/R-ext4-rsv-conversion]
+root         321  0.0  0.0      0     0 ?        I<   15:14   0:00 [kworker/1:1H-kblockd]
+root         389  0.0  0.0      0     0 ?        I<   15:14   0:00 [kworker/0:1H-kblockd]
+root         490  0.0  0.0      0     0 ?        S    15:14   0:00 [irq/18-vmwgfx]
+root         494  0.0  0.0      0     0 ?        I<   15:14   0:00 [kworker/R-ttm]
+avahi       1074  0.0  0.1   6748  4820 ?        Ss   15:14   0:00 avahi-daemon: running [Ubuntu.local]
+root        1078  0.0  0.0   2888  2008 ?        Ss   15:14   0:00 /bin/sh /usr/lib/systemd/scripts/chronyd-starter.sh -n -F 1
+message+    1080  0.0  0.2  12084  9080 ?        Ss   15:14   0:03 @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+root        1099  0.0  0.6  49444 30256 ?        Ss   15:14   0:00 /usr/bin/python3 /usr/bin/networkd-dispatcher --run-startup-triggers
+polkitd     1102  0.0  0.2 389532 12860 ?        Ssl  15:14   0:01 /usr/lib/polkit-1/polkitd --no-debug --log-level=notice
+root        1113  0.0  0.1 312124  8412 ?        Ssl  15:14   0:00 /usr/libexec/accounts-daemon
+root        1114  0.0  0.0   9660  3396 ?        Ss   15:14   0:00 /usr/sbin/cron -f -P
+root        1116  0.0  0.1 310724  7972 ?        Ssl  15:14   0:00 /usr/libexec/switcheroo-control
+root        1124  0.0  0.3 543836 15692 ?        Ssl  15:14   0:00 /usr/libexec/udisks2/udisksd
+avahi       1145  0.0  0.0   6564  1640 ?        S    15:14   0:00 avahi-daemon: chroot helper
+syslog      1208  0.0  0.1 220604  6468 ?        Ssl  15:14   0:00 /usr/sbin/rsyslogd -n -iNONE
+_chrony     1236  0.0  0.1  20424  6468 ?        S    15:14   0:00 /usr/sbin/chronyd -n -F 1
+root        1273  0.0  0.5 691764 22632 ?        Ssl  15:14   0:00 /usr/sbin/NetworkManager --no-daemon
+root        1276  0.0  0.1  17972  7120 ?        Ss   15:14   0:00 /usr/sbin/wpa_supplicant -u -s -O DIR=/run/wpa_supplicant GROUP=netdev
+_chrony     1297  0.0  0.0  12120  3412 ?        S    15:14   0:00 /usr/sbin/chronyd -n -F 1
+root        1316  0.0  0.3 391608 14084 ?        Ssl  15:14   0:00 /usr/sbin/ModemManager
+root        1524  0.0  0.2  32072 13032 ?        Ss   15:14   0:00 /usr/sbin/cupsd -l
+jenkins     1527  1.1 13.0 4314132 586544 ?      Ssl  15:14   0:41 /usr/bin/java -Djava.awt.headless=true -jar /usr/share/java/jenkins.war --webroot=/var/cache/jenkins/war --httpPort=8080
+root        1534  0.0  0.7 128716 32768 ?        Ssl  15:14   0:00 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+root        1572  0.1  1.1 1867212 52424 ?       Ssl  15:14   0:06 /usr/bin/containerd
+cups-br+    1654  0.0  0.5 207560 23108 ?        Ssl  15:14   0:00 /usr/sbin/cups-browsed
+root        1794 11.3  1.8 1981092 83792 ?       Ssl  15:14   6:55 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+root        1819  0.0  0.0 355932  3276 ?        Sl   15:14   0:03 /usr/bin/VBoxDRMClient
+root        1822  0.0  0.2 387300 10876 ?        Ssl  15:14   0:00 /usr/sbin/gdm3
+root        1826  0.0  0.0 294680  3916 ?        Sl   15:14   0:00 /usr/sbin/VBoxService --pidfile /var/run/vboxadd-service.sh
+rtkit       2018  0.0  0.0  87408  3640 ?        SNsl 15:14   0:00 /usr/libexec/rtkit-daemon
+colord      2351  0.0  0.3 320076 16464 ?        Ssl  15:14   0:00 /usr/libexec/colord
+root        2392  0.0  0.2 321272 11400 ?        Ssl  15:14   0:00 /usr/libexec/upowerd
+root        2819  0.0  0.0      0     0 ?        I<   15:14   0:00 [kworker/u18:1-ttm]
+root        2882  0.0  0.1 311876  7920 ?        Ssl  15:14   0:00 /usr/libexec/power-profiles-daemon
+vboxuser    2981  0.0  0.3  24044 15664 ?        Ss   15:14   0:02 /usr/lib/systemd/systemd --user
+vboxuser    2990  0.0  0.0  23456  4196 ?        S    15:14   0:00 (sd-pam)
+vboxuser    3263  0.0  0.1  97560  7940 ?        Ssl  15:14   0:00 /usr/libexec/gcr-ssh-agent --base-dir /run/user/1000/gcr
+vboxuser    3271  0.0  0.1  10484  6812 ?        Ss   15:14   0:00 /usr/bin/ssh-agent -D
+root        5659  0.0  0.0      0     0 ?        S    15:15   0:00 [psimon]
+root        5838  0.0  0.0      0     0 ?        I<   15:17   0:00 [kworker/u19:1-ttm]
+root        5839  0.0  0.0      0     0 ?        I<   15:17   0:00 [kworker/u19:2-ttm]
+root        5905  0.0  1.0 585928 48160 ?        Ssl  15:18   0:01 /usr/libexec/fwupd/fwupd
+root        6068  0.0  0.0      0     0 ?        I<   15:19   0:00 [kworker/u17:1-ttm]
+root        6559  0.0  0.3  50832 17856 ?        S<s  15:36   0:00 /usr/lib/systemd/systemd-journald
+root        6562  0.0  0.0      0     0 ?        I    15:36   0:00 [kworker/0:0-cgroup_free]
+systemd+    6589  0.0  0.3  22560 15036 ?        Ss   15:36   0:00 /usr/lib/systemd/systemd-resolved
+root        6722  0.0  0.0      0     0 ?        I    15:36   0:00 [kworker/u13:1-flush-8:0]
+root        7241  0.0  0.0      0     0 ?        I    15:38   0:00 [kworker/u14:2-events_unbound]
+root        7270  0.0  0.0      0     0 ?        I    15:41   0:00 [kworker/u15:0-flush-8:0]
+root        7295  0.0  0.0      0     0 ?        I    15:48   0:00 [kworker/u14:0-events_unbound]
+root        7311  0.0  0.0      0     0 ?        I    16:00   0:00 [kworker/0:2-cgwb_release]
+root        7318  0.0  0.0      0     0 ?        I    16:00   0:00 [kworker/1:2-cgroup_free]
+root        7321  0.0  1.0 2025736 45472 ?       Ssl  16:00   0:00 /usr/lib/snapd/snapd
+root        7376  0.0  0.2  39072 12732 ?        Ss   16:00   0:00 /usr/lib/systemd/systemd-udevd
+root        7382  0.0  0.2  18632  9776 ?        Ss   16:00   0:00 /usr/lib/systemd/systemd-logind
+systemd+    7395  0.0  0.1  16808  7780 ?        Ss   16:00   0:00 /usr/lib/systemd/systemd-oomd
+root        7402  0.0  0.0      0     0 ?        S    16:00   0:00 [psimon]
+root        7435  0.0  0.0      0     0 ?        I<   16:00   0:00 [kworker/2:1H-kblockd]
+root        7497  0.0  0.0      0     0 ?        I    16:00   0:00 [kworker/2:1-events]
+root        8346  0.0  0.0      0     0 ?        I    16:06   0:00 [kworker/2:2-cgroup_release]
+root        8351  0.0  0.0      0     0 ?        I    16:09   0:00 [kworker/1:1-cgroup_release]
+root        8352  0.0  0.0      0     0 ?        I    16:09   0:00 [kworker/1:3-events]
+root        8353  0.0  0.0      0     0 ?        I    16:10   0:00 [kworker/u15:2-events_unbound]
+root        8627  0.0  0.0      0     0 ?        I    16:14   0:00 [kworker/u13:0-writeback]
+root        8670  0.0  0.0      0     0 ?        I    16:14   0:00 [kworker/2:0-rcu_gp]
+root        8671  0.0  0.0      0     0 ?        I    16:14   0:00 [kworker/u14:3-writeback]
+root        8706  0.0  0.0      0     0 ?        I    16:14   0:00 [kworker/2:3-cgroup_free]
+root        8712  0.0  0.0      0     0 ?        I    16:14   0:00 [kworker/u13:3-writeback]
+vboxuser    8920  1.5  0.1  10076  6908 ?        Ss   16:14   0:00 /usr/bin/dbus-daemon --session --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+vboxuser    8921  0.1  0.1 689692  7844 ?        Ssl  16:14   0:00 /usr/libexec/xdg-document-portal
+vboxuser    8925  0.0  0.1 309964  6932 ?        Ssl  16:14   0:00 /usr/libexec/xdg-permission-store
+root        8932  0.0  0.0   2792  2304 ?        Ss   16:14   0:00 fusermount3 -o rw,nosuid,nodev,fsname=portal,auto_unmount,subtype=portal -- /run/user/1000/doc
+root        8980  0.2  0.2 175472 11060 ?        Sl   16:14   0:00 gdm-session-worker [pam/gdm-password]
+vboxuser    9027  0.2  0.2 185844 10976 ?        SLsl 16:14   0:00 /usr/bin/gnome-keyring-daemon --foreground --components=pkcs11,secrets --control-directory=/run/user/1000/keyring
+vboxuser    9040  0.0  0.1 170796  6820 tty2     Ssl+ 16:14   0:00 /usr/libexec/gdm-wayland-session /usr/bin/gnome-session --session=ubuntu
+vboxuser    9062  0.1  0.2 175208  9564 tty2     Sl+  16:14   0:00 /usr/libexec/gnome-session-init-worker ubuntu
+root        9120  0.0  0.0      0     0 ?        I<   16:14   0:00 [kworker/2:2H]
+vboxuser    9161  0.0  0.1  89808  5884 ?        Ssl  16:14   0:00 /usr/libexec/gnome-session-ctl --monitor
+vboxuser    9171  0.1  0.1 315552  8948 ?        Ssl  16:14   0:00 /usr/libexec/gvfsd
+vboxuser    9177  0.0  0.1 400972  7896 ?        Sl   16:14   0:00 /usr/libexec/gvfsd-fuse /run/user/1000/gvfs -f
+vboxuser    9181  0.3  0.2 615864 11464 ?        Ssl  16:14   0:00 /usr/libexec/gnome-session-service --session=ubuntu
+vboxuser    9192 21.8  7.5 4482136 341208 ?      Ssl  16:14   0:03 /usr/bin/gnome-shell --mode=ubuntu
+vboxuser    9216  0.0  0.1 381076  7972 ?        Ssl  16:14   0:00 /usr/libexec/at-spi-bus-launcher
+vboxuser    9223  0.0  0.1   8616  5236 ?        S    16:14   0:00 /usr/bin/dbus-daemon --config-file=/usr/share/defaults/at-spi2/accessibility.conf --nofork --print-address 11 --address=unix:path=/run/user/1000/at-spi/bus
+vboxuser    9225  0.0  0.1 168688  7852 ?        Sl   16:14   0:00 /usr/libexec/at-spi2-registryd --use-gnome-session
+vboxuser    9241  0.2  0.4 658708 19824 ?        Sl   16:14   0:00 /usr/libexec/gnome-shell-calendar-server
+vboxuser    9249  0.3  1.0 610776 46340 ?        Ssl  16:14   0:00 /usr/libexec/evolution-source-registry
+vboxuser    9259  0.4  0.7 2662324 32940 ?       Sl   16:14   0:00 /usr/bin/gjs -m /usr/share/gnome-shell/org.gnome.Shell.Notifications
+vboxuser    9263  0.1  0.7 469412 32396 ?        Sl   16:14   0:00 /usr/libexec/goa-daemon
+vboxuser    9265  0.4  0.2 461860 11780 ?        Ssl  16:14   0:00 /usr/bin/ibus-daemon --panel disable
+vboxuser    9267  0.0  0.2 256340 10552 ?        Ssl  16:14   0:00 /usr/libexec/gsd-a11y-settings
+vboxuser    9269  0.0  0.2 254172 10536 ?        Ssl  16:14   0:00 /usr/libexec/gsd-color
+vboxuser    9272  0.1  0.2 262708 12740 ?        Ssl  16:14   0:00 /usr/libexec/gsd-datetime
+vboxuser    9276  0.1  0.2 393316 10828 ?        Ssl  16:14   0:00 /usr/libexec/gsd-housekeeping
+vboxuser    9279  0.0  0.1 385676  8264 ?        Ssl  16:14   0:00 /usr/libexec/gsd-keyboard
+vboxuser    9282  0.2  0.3 644412 15160 ?        Ssl  16:14   0:00 /usr/libexec/gsd-media-keys
+vboxuser    9284  0.1  0.2 469740 11772 ?        Ssl  16:14   0:00 /usr/libexec/gsd-power
+vboxuser    9286  0.1  0.3 330168 14404 ?        Ssl  16:14   0:00 /usr/libexec/gsd-print-notifications
+vboxuser    9288  0.0  0.1 459524  8324 ?        Ssl  16:14   0:00 /usr/libexec/gsd-rfkill
+vboxuser    9301  0.5  0.7 645892 34764 ?        Sl   16:14   0:00 /usr/bin/update-notifier
+vboxuser    9302  0.0  0.1 172432  7576 ?        Ssl  16:14   0:00 /usr/libexec/gsd-screensaver-proxy
+vboxuser    9304  0.7  1.4 842952 65432 ?        Sl   16:14   0:00 /usr/libexec/evolution-data-server/evolution-alarm-notify
+vboxuser    9308  0.0  0.2 312172  9624 ?        Sl   16:14   0:00 /usr/libexec/gsd-disk-utility-notify
+vboxuser    9341  0.0  0.2 469940 13120 ?        Ssl  16:14   0:00 /usr/libexec/gsd-sharing
+vboxuser    9348  0.0  0.2 388252  9812 ?        Ssl  16:14   0:00 /usr/libexec/gsd-smartcard
+vboxuser    9356  0.1  0.2 257492 10768 ?        Ssl  16:14   0:00 /usr/libexec/gsd-sound
+vboxuser    9363  0.1  0.2 392824 10056 ?        Ssl  16:14   0:00 /usr/libexec/gsd-usb-protection
+vboxuser    9368  0.0  0.2 392960 10740 ?        Ssl  16:14   0:00 /usr/libexec/gsd-wwan
+vboxuser    9389  0.0  0.2 390544 10388 ?        Sl   16:14   0:00 /usr/libexec/goa-identity-service
+root        9401  0.2  0.1  17436  8100 ?        Ss   16:14   0:00 /usr/lib/systemd/systemd-hostnamed
+vboxuser    9405  0.0  0.2 402080 12612 ?        Sl   16:14   0:00 /usr/libexec/gsd-printer
+vboxuser    9408  0.0  0.0   3768  2292 ?        S    16:14   0:00 bwrap --unshare-all --die-with-parent --chdir / --ro-bind /usr /usr --dev /dev --ro-bind-try /etc/ld.so.cache /etc/ld.so.cache --ro-bind-try /nix/store /nix/store --tmpfs /tmp-home --tmpfs /tmp-run --clearenv --setenv HOME /tmp-home --setenv XDG_RUNTIME_DIR /tmp-run --setenv XDG_RUNTIME_DIR /run/user/1000 --symlink /usr/lib64 /lib64 --symlink /usr/lib /lib --seccomp 67 /usr/libexec/glycin-loaders/2+/glycin-image-rs --dbus-fd 66
+vboxuser    9419  0.0  0.0   3768  1444 ?        S    16:14   0:00 bwrap --unshare-all --die-with-parent --chdir / --ro-bind /usr /usr --dev /dev --ro-bind-try /etc/ld.so.cache /etc/ld.so.cache --ro-bind-try /nix/store /nix/store --tmpfs /tmp-home --tmpfs /tmp-run --clearenv --setenv HOME /tmp-home --setenv XDG_RUNTIME_DIR /tmp-run --setenv XDG_RUNTIME_DIR /run/user/1000 --symlink /usr/lib64 /lib64 --symlink /usr/lib /lib --seccomp 67 /usr/libexec/glycin-loaders/2+/glycin-image-rs --dbus-fd 66
+root        9420  0.2  0.1  17420  7924 ?        Ss   16:14   0:00 /usr/lib/systemd/systemd-localed
+vboxuser    9425  0.2  0.1 280508  7908 ?        Sl   16:14   0:00 /usr/libexec/glycin-loaders/2+/glycin-image-rs --dbus-fd 66
+vboxuser    9426  0.0  0.1 245600  8292 ?        Sl   16:14   0:00 /usr/libexec/ibus-dconf
+vboxuser    9427 12.0  0.8 502544 37384 ?        Sl   16:14   0:02 /usr/libexec/ibus-extension-gtk3
+vboxuser    9436  0.0  0.1 311100  8036 ?        Sl   16:14   0:00 /usr/libexec/ibus-portal
+vboxuser    9473  0.3  1.5 212312 71288 ?        S    16:14   0:00 /usr/bin/Xwayland :0 -rootless -noreset -accessx -core -auth /run/user/1000/.mutter-Xwaylandauth.5Q40X3 -listenfd 4 -listenfd 5 -displayfd 6 -initfd 7 -byteswappedclients -enable-ei-portal
+vboxuser    9491  0.3  0.6 895956 27204 ?        Ssl  16:14   0:00 /usr/libexec/evolution-calendar-factory
+vboxuser    9508  1.2  0.6 732936 30652 ?        SNsl 16:14   0:00 /usr/libexec/localsearch-3
+vboxuser    9510  0.4  0.4 566188 20960 ?        Ssl  16:14   0:00 /usr/libexec/xdg-desktop-portal
+vboxuser    9516  0.2  0.2 104704 11292 ?        S<sl 16:14   0:00 /usr/bin/pipewire
+vboxuser    9518  0.9  0.5 490532 22976 ?        S<sl 16:14   0:00 /usr/bin/wireplumber
+vboxuser    9521  0.1  0.2 108420 11816 ?        S<sl 16:14   0:00 /usr/bin/pipewire-pulse
+vboxuser    9526  0.5  0.7 2596780 33236 ?       Sl   16:14   0:00 /usr/bin/gjs -m /usr/share/gnome-shell/org.gnome.ScreenSaver
+vboxuser    9560  0.1  0.2 389496 11144 ?        Ssl  16:14   0:00 /usr/libexec/gvfs-udisks2-volume-monitor
+vboxuser    9565  1.1  1.0 616940 45744 ?        Ssl  16:14   0:00 /usr/libexec/xdg-desktop-portal-gnome
+vboxuser    9571  0.3  0.7 828624 31628 ?        Ssl  16:14   0:00 /usr/libexec/evolution-addressbook-factory
+vboxuser    9595  0.0  0.1 311448  7904 ?        Ssl  16:14   0:00 /usr/libexec/gvfs-gphoto2-volume-monitor
+vboxuser    9611  0.1  0.2 392484  9572 ?        Ssl  16:14   0:00 /usr/libexec/gvfs-afc-volume-monitor
+vboxuser    9619  0.0  0.1 310480  7364 ?        Ssl  16:14   0:00 /usr/libexec/gvfs-mtp-volume-monitor
+vboxuser    9624  0.0  0.1 310432  7388 ?        Ssl  16:14   0:00 /usr/libexec/gvfs-goa-volume-monitor
+vboxuser    9643  0.0  0.1 171776  8124 ?        Sl   16:14   0:00 /usr/libexec/ibus-engine-simple
+vboxuser    9697  2.5  1.5 3191676 70980 ?       Sl   16:14   0:00 gjs /usr/share/gnome-shell/extensions/ding@rastersoft.com/app/ding.js -E -P /usr/share/gnome-shell/extensions/ding@rastersoft.com/app
+geoclue     9721  0.3  0.3 630824 17484 ?        Ssl  16:14   0:00 /usr/libexec/geoclue
+vboxuser    9746  0.0  0.0   3768  2340 ?        S    16:14   0:00 bwrap --unshare-all --die-with-parent --chdir / --ro-bind /usr /usr --dev /dev --ro-bind-try /etc/ld.so.cache /etc/ld.so.cache --ro-bind-try /nix/store /nix/store --tmpfs /tmp-home --tmpfs /tmp-run --clearenv --setenv HOME /tmp-home --setenv XDG_RUNTIME_DIR /tmp-run --setenv XDG_RUNTIME_DIR /run/user/1000 --symlink /usr/lib64 /lib64 --symlink /usr/lib /lib --ro-bind-try /etc/fonts/conf.d /etc/fonts/conf.d --ro-bind-try /etc/fonts/fonts.conf /etc/fonts/fonts.conf --ro-bind-try /home/vboxuser/.cache/fontconfig /home/vboxuser/.cache/fontconfig --ro-bind-try /var/cache/fontconfig /var/cache/fontconfig --bind-try /home/vboxuser/.cache/glycin/usr/libexec/glycin-loaders/2+/glycin-svg /home/vboxuser/.cache/glycin/usr/libexec/glycin-loaders/2+/glycin-svg --setenv XDG_CACHE_HOME /home/vboxuser/.cache/glycin/usr/libexec/glycin-loaders/2+/glycin-svg --seccomp 97 /usr/libexec/glycin-loaders/2+/glycin-svg --dbus-fd 96
+vboxuser    9751  0.0  0.0   3768  1444 ?        S    16:14   0:00 bwrap --unshare-all --die-with-parent --chdir / --ro-bind /usr /usr --dev /dev --ro-bind-try /etc/ld.so.cache /etc/ld.so.cache --ro-bind-try /nix/store /nix/store --tmpfs /tmp-home --tmpfs /tmp-run --clearenv --setenv HOME /tmp-home --setenv XDG_RUNTIME_DIR /tmp-run --setenv XDG_RUNTIME_DIR /run/user/1000 --symlink /usr/lib64 /lib64 --symlink /usr/lib /lib --ro-bind-try /etc/fonts/conf.d /etc/fonts/conf.d --ro-bind-try /etc/fonts/fonts.conf /etc/fonts/fonts.conf --ro-bind-try /home/vboxuser/.cache/fontconfig /home/vboxuser/.cache/fontconfig --ro-bind-try /var/cache/fontconfig /var/cache/fontconfig --bind-try /home/vboxuser/.cache/glycin/usr/libexec/glycin-loaders/2+/glycin-svg /home/vboxuser/.cache/glycin/usr/libexec/glycin-loaders/2+/glycin-svg --setenv XDG_CACHE_HOME /home/vboxuser/.cache/glycin/usr/libexec/glycin-loaders/2+/glycin-svg --seccomp 97 /usr/libexec/glycin-loaders/2+/glycin-svg --dbus-fd 96
+vboxuser    9753  0.1  0.4 437144 18424 ?        Sl   16:14   0:00 /usr/libexec/glycin-loaders/2+/glycin-svg --dbus-fd 96
+vboxuser    9767  0.0  0.1 171452  7260 ?        Ssl  16:14   0:00 /usr/libexec/gvfsd-metadata
+vboxuser    9791  0.0  0.1 165220  6548 ?        Ssl  16:14   0:00 /usr/libexec/dconf-service
+vboxuser    9817  0.0  0.2 536976 10028 ?        Sl   16:14   0:00 /usr/libexec/gvfsd-trash --spawner :1.11 /org/gtk/gvfs/exec_spaw/0
+vboxuser    9858  0.1  0.3 253956 13684 ?        Ssl  16:14   0:00 /usr/libexec/gsd-xsettings
+vboxuser    9909  0.2  1.6 374020 72764 ?        Sl   16:14   0:00 /usr/libexec/ibus-x11
+vboxuser    9910  0.0  0.0   3768  2336 ?        S    16:14   0:00 bwrap --unshare-all --die-with-parent --chdir / --ro-bind /usr /usr --dev /dev --ro-bind-try /etc/ld.so.cache /etc/ld.so.cache --ro-bind-try /nix/store /nix/store --tmpfs /tmp-home --tmpfs /tmp-run --clearenv --setenv HOME /tmp-home --setenv XDG_RUNTIME_DIR /tmp-run --setenv XDG_RUNTIME_DIR /run/user/1000 --symlink /usr/lib64 /lib64 --symlink /usr/lib /lib --seccomp 28 /usr/libexec/glycin-loaders/2+/glycin-image-rs --dbus-fd 27
+root        9911  0.0  0.0      0     0 ?        I    16:14   0:00 [kworker/0:1-rcu_gp]
+vboxuser    9912  0.0  0.0   3768  1444 ?        S    16:14   0:00 bwrap --unshare-all --die-with-parent --chdir / --ro-bind /usr /usr --dev /dev --ro-bind-try /etc/ld.so.cache /etc/ld.so.cache --ro-bind-try /nix/store /nix/store --tmpfs /tmp-home --tmpfs /tmp-run --clearenv --setenv HOME /tmp-home --setenv XDG_RUNTIME_DIR /tmp-run --setenv XDG_RUNTIME_DIR /run/user/1000 --symlink /usr/lib64 /lib64 --symlink /usr/lib /lib --seccomp 28 /usr/libexec/glycin-loaders/2+/glycin-image-rs --dbus-fd 27
+vboxuser    9920  0.0  0.0  19516  1824 ?        S    16:14   0:00 /usr/bin/VBoxClient --clipboard
+vboxuser    9923  0.0  0.1 218336  4516 ?        Sl   16:14   0:00 /usr/bin/VBoxClient --clipboard
+vboxuser    9924  0.0  0.1 212920  7164 ?        Sl   16:14   0:00 /usr/libexec/glycin-loaders/2+/glycin-image-rs --dbus-fd 27
+vboxuser    9927  1.2  2.6 1277772 117908 ?      Sl   16:14   0:00 /usr/libexec/mutter-x11-frames
+vboxuser    9949  0.0  0.0  19516  1744 ?        S    16:14   0:00 /usr/bin/VBoxClient --checkhostversion
+vboxuser    9950  0.0  0.0 151620  2312 ?        Sl   16:14   0:00 /usr/bin/VBoxClient --checkhostversion
+vboxuser    9955  0.0  0.0  19516  1836 ?        S    16:14   0:00 /usr/bin/VBoxClient --vmsvga-session
+vboxuser    9958  0.0  0.0 151620  2468 ?        Sl   16:14   0:00 /usr/bin/VBoxClient --vmsvga-session
+vboxuser    9976  0.9  1.0 542292 45260 ?        Sl   16:14   0:00 /usr/libexec/gnome-control-center-global-shortcuts-provider
+vboxuser    9990  0.6  0.6 494788 28820 ?        Ssl  16:14   0:00 /usr/libexec/xdg-desktop-portal-gtk
+root       10080  0.0  0.0      0     0 ?        I    16:14   0:00 [kworker/u13:4]
+vboxuser   10081  0.8  0.1 303928  6316 ?        Ssl  16:14   0:00 /snap/snapd-desktop-integration/391/usr/bin/user-session-helper /snap/snapd-desktop-integration/391/usr/bin/snapd-desktop-integration
+vboxuser   10141  1.9  0.8 439992 38220 ?        Sl   16:14   0:00 /snap/snapd-desktop-integration/391/usr/bin/snapd-desktop-integration
+vboxuser   10147 11.2  5.6 2262444 256356 ?      Sl   16:14   0:01 ptyxis --new-window
+vboxuser   10179  0.0  0.1 239948  7996 ?        Ssl  16:14   0:00 /usr/libexec/ptyxis-agent --socket-fd=3 --rlimit-nofile=1024
+vboxuser   10229  0.2  0.1  11424  5936 pts/0    Ss   16:14   0:00 /usr/bin/bash
+root       10256  0.0  0.0      0     0 ?        I    16:15   0:00 [kworker/0:3-rcu_gp]
+root       10258  0.0  0.0      0     0 ?        I    16:15   0:00 [kworker/0:4-events]
+root       10275  0.0  0.0      0     0 ?        I    16:15   0:00 [kworker/1:0]
+vboxuser   10282  5.2  0.6 262496 29212 ?        SNl  16:15   0:00 /usr/libexec/localsearch-extractor-3 --socket-fd 3
+vboxuser   10287  0.0  0.0  10136  3928 pts/0    S+   16:15   0:00 bash scripts/Pan_Eduard_linux_demo.sh
+vboxuser   10288  0.0  0.1  16112  7580 pts/0    S+   16:15   0:00 tee evidence/Pan_Eduard_Ubuntu.txt
+vboxuser   10312  0.0  0.1  12636  4848 pts/0    R+   16:15   0:00 ps aux
+1527 /usr/bin/java -Djava.awt.headless=true -jar /usr/share/java/jenkins.war --webroot=/var/cache/jenkins/war --httpPort=8080
+tmpfs           2.2G /dev/shm
+tmpfs           2.2G /tmp
+tmpfs           440M /run/user/1000
+none            1.0M /run/credentials/systemd-journald.service
+none            1.0M /run/credentials/systemd-resolved.service
+Student: Pan Eduard | IT2-2312

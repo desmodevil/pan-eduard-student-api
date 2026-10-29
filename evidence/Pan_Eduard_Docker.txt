@@ -1,0 +1,51 @@
+NAME                           IMAGE                                    COMMAND                  SERVICE   CREATED              STATUS                        PORTS
+pan-eduard-student-api-app-1   pan-eduard-student-api:v1.0-pan-eduard   "java -jar app.jar"      app       About a minute ago   Up About a minute             127.0.0.1:8081->8080/tcp
+pan-eduard-student-api-db-1    postgres:17                              "docker-entrypoint.s…"   db        About a minute ago   Up About a minute (healthy)   5432/tcp
+Image=sha256:b644b0d0700a392ff502b32bc9feb3ef1fd20ae7319fc503fe090b76dda448dc Created=2026-10-29T16:21:05.393673895Z Size=160462559 bytes
+app-1  | 2026-10-29T16:23:32.301Z  INFO 1 --- [pan-eduard-student-api] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+app-1  | 2026-10-29T16:23:32.346Z  INFO 1 --- [pan-eduard-student-api] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 37 ms. Found 1 JPA repository interface.
+app-1  | 2026-10-29T16:23:32.762Z  INFO 1 --- [pan-eduard-student-api] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+app-1  | 2026-10-29T16:23:32.775Z  INFO 1 --- [pan-eduard-student-api] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+app-1  | 2026-10-29T16:23:32.775Z  INFO 1 --- [pan-eduard-student-api] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.48]
+app-1  | 2026-10-29T16:23:32.798Z  INFO 1 --- [pan-eduard-student-api] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+app-1  | 2026-10-29T16:23:32.800Z  INFO 1 --- [pan-eduard-student-api] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1408 ms
+app-1  | 2026-10-29T16:23:33.030Z  INFO 1 --- [pan-eduard-student-api] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+app-1  | 2026-10-29T16:23:33.071Z  INFO 1 --- [pan-eduard-student-api] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.33.Final
+app-1  | 2026-10-29T16:23:33.102Z  INFO 1 --- [pan-eduard-student-api] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+app-1  | 2026-10-29T16:23:33.383Z  INFO 1 --- [pan-eduard-student-api] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+app-1  | 2026-10-29T16:23:33.404Z  INFO 1 --- [pan-eduard-student-api] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+app-1  | 2026-10-29T16:23:33.560Z  INFO 1 --- [pan-eduard-student-api] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@57f0bfc3
+app-1  | 2026-10-29T16:23:33.562Z  INFO 1 --- [pan-eduard-student-api] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+app-1  | 2026-10-29T16:23:33.615Z  INFO 1 --- [pan-eduard-student-api] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+app-1  | 	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+app-1  | 	Database driver: undefined/unknown
+app-1  | 	Database version: 17.11
+app-1  | 	Autocommit mode: undefined/unknown
+app-1  | 	Isolation level: undefined/unknown
+app-1  | 	Minimum pool size: undefined/unknown
+app-1  | 	Maximum pool size: undefined/unknown
+app-1  | 2026-10-29T16:23:34.322Z  INFO 1 --- [pan-eduard-student-api] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+app-1  | 2026-10-29T16:23:34.388Z  INFO 1 --- [pan-eduard-student-api] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+app-1  | 2026-10-29T16:23:35.193Z  INFO 1 --- [pan-eduard-student-api] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+app-1  | 2026-10-29T16:23:35.397Z  INFO 1 --- [pan-eduard-student-api] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+app-1  | 2026-10-29T16:23:35.416Z  INFO 1 --- [pan-eduard-student-api] [           main] edu.pan.Application                      : Started Application in 4.491 seconds (process running for 4.999)
+app-1  | 2026-10-29T16:23:38.493Z  INFO 1 --- [pan-eduard-student-api] [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+app-1  | 2026-10-29T16:23:38.493Z  INFO 1 --- [pan-eduard-student-api] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+app-1  | 2026-10-29T16:23:38.495Z  INFO 1 --- [pan-eduard-student-api] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+Name=/pan-eduard-student-api-app-1 Image=pan-eduard-student-api:v1.0-pan-eduard Ports={"8080/tcp":[{"HostIp":"127.0.0.1","HostPort":"8081"}]}
+got 3 SIGTERM/SIGINTs, forcefully exiting
+ Container pan-eduard-student-api-app-1  Stopping
+ Container pan-eduard-student-api-app-1  Stopped
+ Container pan-eduard-student-api-db-1  Waiting
+ Container pan-eduard-student-api-db-1  Healthy
+ Container pan-eduard-student-api-app-1  Starting
+ Container pan-eduard-student-api-app-1  Started
+openjdk version "17.0.20.1" 2026-08-18
+OpenJDK Runtime Environment Temurin-17.0.20.1+1 (build 17.0.20.1+1)
+OpenJDK 64-Bit Server VM Temurin-17.0.20.1+1 (build 17.0.20.1+1, mixed mode, sharing)
+ Container pan-eduard-student-api-app-1  Stopping
+ Container pan-eduard-student-api-app-1  Stopped
+ Container pan-eduard-student-api-db-1  Waiting
+ Container pan-eduard-student-api-db-1  Healthy
+ Container pan-eduard-student-api-app-1  Starting
+ Container pan-eduard-student-api-app-1  Started

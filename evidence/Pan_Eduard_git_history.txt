@@ -1,0 +1,12 @@
+* d3887bd Pan Eduard: add submission guide defense and honest verification report
+*   d60fddb Pan Eduard: resolve README conflict preserving submission and defense
+|\  
+| * 41d4fd3 Pan Eduard: prepare defense documentation
+* | aa53c88 Pan Eduard: prepare submission documentation
+|/  
+*   d34d78d Pan Eduard: merge CRUD improvement
+|\  
+| * 9bdf21b Pan Eduard: document deterministic CRUD listing
+| * db10ff6 Pan Eduard: return students in stable ID order
+|/  
+* ed75b66 Initial commit: Pan Eduard Student API
