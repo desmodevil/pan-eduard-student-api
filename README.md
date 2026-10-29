@@ -38,3 +38,5 @@ Polling H/5 активируется после первого ручного з
 Feature Pan Eduard: GET /api/students returns records ordered by ID for reproducible demonstrations.
 
 
+
+CI check: Pan Eduard, IT2-2312 — automatic polling trigger.
