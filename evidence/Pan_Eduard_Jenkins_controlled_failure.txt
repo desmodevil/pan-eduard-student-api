@@ -1,0 +1,129 @@
+Started by user Eduard Pan
+
+Obtained Jenkinsfile from git https://github.com/desmodevil/devops-midterm-paneduard.git
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on Jenkins
+ in /var/lib/jenkins/workspace/Pan_Eduard_Student_API_Failure
+[Pipeline] {
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] timestamps
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Checkout)
+[Pipeline] checkout
+20:54:19  Selected Git installation does not exist. Using Default
+20:54:19  The recommended git tool is: NONE
+20:54:19  No credentials specified
+20:54:19  Cloning the remote Git repository
+20:54:19  Cloning repository https://github.com/desmodevil/devops-midterm-paneduard.git
+20:54:19   > git init /var/lib/jenkins/workspace/Pan_Eduard_Student_API_Failure # timeout=10
+20:54:19  Fetching upstream changes from https://github.com/desmodevil/devops-midterm-paneduard.git
+20:54:19   > git --version # timeout=10
+20:54:19   > git --version # 'git version 2.53.0'
+20:54:19   > git fetch --tags --force --progress -- https://github.com/desmodevil/devops-midterm-paneduard.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+20:54:21   > git config remote.origin.url https://github.com/desmodevil/devops-midterm-paneduard.git # timeout=10
+20:54:21   > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+20:54:21  Avoid second fetch
+20:54:21   > git rev-parse refs/remotes/origin/feature/pan-eduard-ci-failure^{commit} # timeout=10
+20:54:21  Checking out Revision cb0ec9349eb28e40cd4a3c63dd2906ffe4204baa (refs/remotes/origin/feature/pan-eduard-ci-failure)
+20:54:21   > git config core.sparsecheckout # timeout=10
+20:54:21   > git checkout -f cb0ec9349eb28e40cd4a3c63dd2906ffe4204baa # timeout=10
+20:54:21  Commit message: "Pan Eduard: demonstrate controlled test failure"
+20:54:21  First time build. Skipping changelog.
+[Pipeline] echo
+20:54:21  Pan Eduard | IT2-2312
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Build)
+[Pipeline] sh
+20:54:21  + chmod +x gradlew
+20:54:21  + ./gradlew --no-daemon classes bootJar
+20:54:23  To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.14.3/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+20:54:24  Daemon will be stopped at the end of the build 
+
+20:54:36  > Task :compileJava
+20:54:36  > Task :processResources
+20:54:36  > Task :classes
+20:54:36  > Task :resolveMainClassName
+20:54:36  > Task :bootJar
+20:54:36  
+20:54:36  BUILD SUCCESSFUL in 14s
+20:54:36  4 actionable tasks: 4 executed
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Test)
+[Pipeline] sh
+20:54:37  + ./gradlew --no-daemon test
+
+20:54:37  To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.14.3/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+
+20:54:39  Daemon will be stopped at the end of the build 
+
+20:54:47  > Task :compileJava UP-TO-DATE
+20:54:47  > Task :processResources UP-TO-DATE
+20:54:47  > Task :classes UP-TO-DATE
+20:54:47  > Task :compileTestJava
+20:54:47  > Task :processTestResources
+20:54:47  > Task :testClasses
+
+20:54:50  
+20:54:50  > Task :test
+20:54:50  
+20:54:50  ControlledFailureTest > demonstratePipelineFailure() FAILED
+20:54:50      org.opentest4j.AssertionFailedError at ControlledFailureTest.java:9
+
+20:54:58  
+20:54:58  OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+20:54:58  2026-10-29T20:54:58.050Z  INFO 9757 --- [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+20:54:58  2026-10-29T20:54:58.071Z  INFO 9757 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+20:54:58  2026-10-29T20:54:58.074Z  INFO 9757 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+20:54:58  
+20:54:58  > Task :test
+20:54:58  
+20:54:58  4 tests completed, 1 failed
+20:54:58  
+20:54:58  > Task :test FAILED
+20:54:58  
+20:54:58  FAILURE: Build failed with an exception.
+20:54:58  
+20:54:58  * What went wrong:
+20:54:58  Execution failed for task ':test'.
+20:54:58  > There were failing tests. See the report at: file:///var/lib/jenkins/workspace/Pan_Eduard_Student_API_Failure/build/reports/tests/test/index.html
+20:54:58  
+20:54:58  * Try:
+20:54:58  > Run with --scan to get full insights.
+20:54:58  
+20:54:58  BUILD FAILED in 21s
+20:54:58  5 actionable tasks: 3 executed, 2 up-to-date
+Post stage
+
+[Pipeline] junit
+20:54:59  Recording test results
+20:54:59  [Checks API] No suitable checks publisher found.
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Docker Build)
+Stage "Docker Build" skipped due to earlier failure(s)
+[Pipeline] getContext
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Verify)
+Stage "Verify" skipped due to earlier failure(s)
+[Pipeline] getContext
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // timestamps
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+ERROR: script returned exit code 1
+Finished: FAILURE

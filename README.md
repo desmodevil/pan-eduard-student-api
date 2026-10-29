@@ -2,9 +2,9 @@
 Student: Pan Eduard | Group: IT2-2312
 Documentation status: submission guide and defense notes
 
-Java 17+, Spring Boot 3.5.7, Gradle wrapper 8.14.3, PostgreSQL 17.
+Релиз: 1.1-pan-eduard. Java 17 (рекомендуется для воспроизводимости), Spring Boot 3.5.7, Gradle wrapper 8.14.3, PostgreSQL 17.
 Build: ./gradlew clean test bootJar (Windows: gradlew.bat).
-Tests use H2; actual PostgreSQL requires Docker integration checks.
+Тесты используют H2. CRUD с настоящей PostgreSQL проверен в Ubuntu Docker; результаты в evidence/VERIFICATION.md.
 
 ## Запуск
 1. Запустить Docker engine.
@@ -42,3 +42,5 @@ Feature Pan Eduard: GET /api/students returns records ordered by ID for reproduc
 CI check: Pan Eduard, IT2-2312 — automatic polling trigger.
 
 CI check: Pan Eduard, IT2-2312 — automatic polling trigger.
+
+Финальная сдача и перенос на ноутбук: docs/SUBMISSION.md.

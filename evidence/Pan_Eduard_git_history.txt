@@ -1,3 +1,12 @@
+* b172e93 Pan Eduard: release version 1.1 and verify rebuilt containers
+| * d0f8f5b Pan Eduard: remove intentional failure and restore passing tests
+| * cb0ec93 Pan Eduard: demonstrate controlled test failure
+|/  
+* 1b06e6a Pan Eduard: demonstrate automatic Jenkins trigger
+* 8aac8a3 Pan Eduard: demonstrate automatic Jenkins trigger
+* 7eaeac3 Pan Eduard: fix Declarative Pipeline syntax
+* 63f890b Pan Eduard: use JDK 17 for Jenkins builds
+* c125dc0 Pan Eduard: verify Linux, CRUD and Docker on port 8081
 * d3887bd Pan Eduard: add submission guide defense and honest verification report
 *   d60fddb Pan Eduard: resolve README conflict preserving submission and defense
 |\  

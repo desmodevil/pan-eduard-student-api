@@ -1,0 +1,294 @@
+Started by user Eduard Pan
+
+Obtained Jenkinsfile from git https://github.com/desmodevil/devops-midterm-paneduard.git
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on Jenkins
+ in /var/lib/jenkins/workspace/Pan_Eduard_Student_API
+[Pipeline] {
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] timestamps
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Checkout)
+[Pipeline] checkout
+16:43:31  Selected Git installation does not exist. Using Default
+16:43:31  The recommended git tool is: NONE
+16:43:31  No credentials specified
+16:43:31  Cloning the remote Git repository
+16:43:31  Cloning repository https://github.com/desmodevil/devops-midterm-paneduard.git
+16:43:31   > git init /var/lib/jenkins/workspace/Pan_Eduard_Student_API # timeout=10
+16:43:31  Fetching upstream changes from https://github.com/desmodevil/devops-midterm-paneduard.git
+16:43:31   > git --version # timeout=10
+16:43:31   > git --version # 'git version 2.53.0'
+16:43:31   > git fetch --tags --force --progress -- https://github.com/desmodevil/devops-midterm-paneduard.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+16:43:32   > git config remote.origin.url https://github.com/desmodevil/devops-midterm-paneduard.git # timeout=10
+16:43:32   > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+16:43:32  Avoid second fetch
+16:43:32   > git rev-parse refs/remotes/origin/main^{commit} # timeout=10
+16:43:32  Checking out Revision 7eaeac36dd9b3e9032e85f36fb34970277bf21a2 (refs/remotes/origin/main)
+16:43:32   > git config core.sparsecheckout # timeout=10
+16:43:32   > git checkout -f 7eaeac36dd9b3e9032e85f36fb34970277bf21a2 # timeout=10
+16:43:32  Commit message: "Pan Eduard: fix Declarative Pipeline syntax"
+16:43:32  First time build. Skipping changelog.
+[Pipeline] echo
+16:43:32  Pan Eduard | IT2-2312
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Build)
+[Pipeline] sh
+16:43:32  + chmod +x gradlew
+16:43:32  + ./gradlew --no-daemon classes bootJar
+16:43:33  Downloading https://services.gradle.org/distributions/gradle-8.14.3-bin.zip
+16:43:39  .............10%.............20%.............30%.............40%.............50%.............60%.............70%.............80%.............90%..............100%
+16:43:43  
+16:43:43  Welcome to Gradle 8.14.3!
+16:43:43  
+16:43:43  Here are the highlights of this release:
+16:43:43   - Java 24 support
+16:43:43   - GraalVM Native Image toolchain selection
+16:43:43   - Enhancements to test reporting
+16:43:43   - Build Authoring improvements
+16:43:43  
+16:43:43  For more details see https://docs.gradle.org/8.14.3/release-notes.html
+16:43:43  
+16:43:43  To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.14.3/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+16:43:44  Daemon will be stopped at the end of the build 
+
+16:44:52  > Task :compileJava
+16:44:52  > Task :processResources
+16:44:52  > Task :classes
+16:44:52  > Task :resolveMainClassName
+
+16:44:54  > Task :bootJar
+16:44:54  
+16:44:54  BUILD SUCCESSFUL in 1m 21s
+16:44:54  4 actionable tasks: 4 executed
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Test)
+[Pipeline] sh
+
+16:44:55  + ./gradlew --no-daemon test
+
+16:44:56  To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.14.3/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+
+16:44:58  Daemon will be stopped at the end of the build 
+
+16:45:10  > Task :compileJava UP-TO-DATE
+16:45:10  > Task :processResources UP-TO-DATE
+16:45:10  > Task :classes UP-TO-DATE
+
+16:45:18  > Task :compileTestJava
+
+16:45:18  > Task :processTestResources
+16:45:18  > Task :testClasses
+
+16:45:28  OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+16:45:28  2026-10-29T16:45:28.378Z  INFO 21151 --- [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+16:45:28  2026-10-29T16:45:28.387Z  INFO 21151 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+16:45:28  2026-10-29T16:45:28.393Z  INFO 21151 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+16:45:28  > Task :test
+16:45:28  
+16:45:28  BUILD SUCCESSFUL in 33s
+16:45:28  5 actionable tasks: 3 executed, 2 up-to-date
+
+Post stage
+[Pipeline] junit
+16:45:29  Recording test results
+16:45:29  [Checks API] No suitable checks publisher found.
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Docker Build)
+[Pipeline] sh
+16:45:29  + docker build -t pan-eduard-student-api:v1.0-pan-eduard .
+16:45:29  DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+16:45:29              Install the buildx component to build images with BuildKit:
+16:45:29              https://docs.docker.com/go/buildx/
+16:45:29  
+16:45:29  Sending build context to Docker daemon  108.5kB
+16:45:29  
+16:45:29  Step 1/14 : FROM eclipse-temurin:17-jdk AS build
+
+16:45:31  17-jdk: Pulling from library/eclipse-temurin
+
+16:45:34  Digest: sha256:91011320978c10ec51d2cde1eb6f616db6d2a739a0e521096c343dd3fed9abe6
+16:45:34  Status: Downloaded newer image for eclipse-temurin:17-jdk
+16:45:34   ---> 91011320978c
+16:45:34  Step 2/14 : WORKDIR /workspace
+16:45:34   ---> Running in 54e0070baba3
+
+16:45:41   ---> Removed intermediate container 54e0070baba3
+16:45:41   ---> aa5428b2df27
+16:45:41  Step 3/14 : COPY gradlew .
+
+16:45:41   ---> 41e0e792b4c1
+16:45:41  Step 4/14 : COPY gradle gradle
+
+16:45:42   ---> 3608abda0910
+16:45:42  Step 5/14 : RUN chmod 755 gradlew
+16:45:42   ---> Running in b9b84cd43266
+
+16:45:44   ---> Removed intermediate container b9b84cd43266
+16:45:44   ---> 929243da0ad2
+16:45:44  Step 6/14 : COPY settings.gradle build.gradle ./
+
+16:45:45   ---> dcb87c281bc4
+16:45:45  Step 7/14 : COPY src src
+
+16:45:45   ---> 8b27ef2aa75d
+16:45:45  Step 8/14 : RUN ./gradlew --no-daemon bootJar
+16:45:46   ---> Running in 8472df123696
+16:45:46  Downloading https://services.gradle.org/distributions/gradle-8.14.3-bin.zip
+
+16:45:51  .............10%.............20%.............30%.............40%.............50%.............60%.............70%.............80%.............90%..............100%
+
+16:45:53  
+16:45:53  Welcome to Gradle 8.14.3!
+16:45:53  
+16:45:53  Here are the highlights of this release:
+16:45:53   - Java 24 support
+16:45:53   - GraalVM Native Image toolchain selection
+16:45:53   - Enhancements to test reporting
+16:45:53   - Build Authoring improvements
+16:45:53  
+16:45:53  For more details see https://docs.gradle.org/8.14.3/release-notes.html
+16:45:53  
+16:45:53  To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.14.3/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+
+16:45:54  Daemon will be stopped at the end of the build 
+
+16:47:02  > Task :compileJava
+16:47:02  > Task :processResources
+16:47:02  > Task :classes
+16:47:02  > Task :resolveMainClassName
+16:47:02  > Task :bootJar
+16:47:02  
+16:47:02  BUILD SUCCESSFUL in 1m 15s
+16:47:02  4 actionable tasks: 4 executed
+
+16:47:20   ---> Removed intermediate container 8472df123696
+16:47:20   ---> ec4ce2c069fd
+16:47:20  Step 9/14 : FROM eclipse-temurin:17-jre
+
+16:47:21  17-jre: Pulling from library/eclipse-temurin
+
+16:47:24  Digest: sha256:4faa9eaf440514dd4f7ef71fecb92526e13679aea039bed5d2fc98e885c60dee
+16:47:24  Status: Downloaded newer image for eclipse-temurin:17-jre
+16:47:24   ---> 4faa9eaf4405
+16:47:24  Step 10/14 : WORKDIR /app
+16:47:24   ---> Running in ffe74b90ecef
+
+16:47:27   ---> Removed intermediate container ffe74b90ecef
+16:47:27   ---> 30431d156d1e
+16:47:27  Step 11/14 : COPY --from=build /workspace/build/libs/app.jar app.jar
+
+16:47:30   ---> 3598856750ca
+16:47:30  Step 12/14 : USER 10001:10001
+16:47:30   ---> Running in 679f9383de04
+
+16:47:32   ---> Removed intermediate container 679f9383de04
+16:47:32   ---> e77783128bb8
+16:47:32  Step 13/14 : EXPOSE 8080
+16:47:32   ---> Running in df82b0e901a9
+
+16:47:50   ---> Removed intermediate container df82b0e901a9
+16:47:50   ---> ddad2329a24b
+16:47:50  Step 14/14 : ENTRYPOINT ["java","-jar","app.jar"]
+16:47:50   ---> Running in 27a8739fa94f
+
+16:47:51   ---> Removed intermediate container 27a8739fa94f
+16:47:51   ---> a7300e6f3f53
+16:47:51  Successfully built a7300e6f3f53
+16:47:51  Successfully tagged pan-eduard-student-api:v1.0-pan-eduard
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Verify)
+[Pipeline] sh
+16:47:52  + docker image inspect pan-eduard-student-api:v1.0-pan-eduard
+16:47:52  [
+16:47:52      {
+16:47:52          "Architecture": "amd64",
+16:47:52          "Config": {
+16:47:52              "Entrypoint": [
+16:47:52                  "java",
+16:47:52                  "-jar",
+16:47:52                  "app.jar"
+16:47:52              ],
+16:47:52              "Env": [
+16:47:52                  "PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+16:47:52                  "JAVA_HOME=/opt/java/openjdk",
+16:47:52                  "LANG=en_US.UTF-8",
+16:47:52                  "LANGUAGE=en_US:en",
+16:47:52                  "LC_ALL=en_US.UTF-8",
+16:47:52                  "JAVA_VERSION=jdk-17.0.20.1+1"
+16:47:52              ],
+16:47:52              "ExposedPorts": {
+16:47:52                  "8080/tcp": {}
+16:47:52              },
+16:47:52              "Labels": {
+16:47:52                  "org.opencontainers.image.created": "2026-10-25T10:26:07.538865+00:00",
+16:47:52                  "org.opencontainers.image.description": "The Ubuntu container image maintained by Canonical\n\nUbuntu is a Debian-based Linux operating system that runs from the desktop to the cloud, to all your internet connected things.\nIt is the world's most popular operating system across public clouds and OpenStack clouds.\nIt is the number one platform for containers; from Docker to Kubernetes to LXD, Ubuntu can run your containers at scale.\nFast, secure and simple, Ubuntu powers millions of PCs worldwide.\n",
+16:47:52                  "org.opencontainers.image.title": "ubuntu",
+16:47:52                  "org.opencontainers.image.version": "26.04"
+16:47:52              },
+16:47:52              "User": "10001:10001",
+16:47:52              "WorkingDir": "/app"
+16:47:52          },
+16:47:52          "Created": "2026-10-29T16:47:51.517969162Z",
+16:47:52          "Descriptor": {
+16:47:52              "digest": "sha256:a7300e6f3f53a1d05e3656e1ce1dd4518b0f5217664d03d24c5758c723d30295",
+16:47:52              "mediaType": "application/vnd.oci.image.manifest.v1+json",
+16:47:52              "size": 2051
+16:47:52          },
+16:47:52          "Id": "sha256:a7300e6f3f53a1d05e3656e1ce1dd4518b0f5217664d03d24c5758c723d30295",
+16:47:52          "Metadata": {
+16:47:52              "LastTagTime": "2026-10-29T16:47:51.746814257Z"
+16:47:52          },
+16:47:52          "Os": "linux",
+16:47:52          "Parent": "sha256:ddad2329a24b889c637f8654919d1a6ec877f5d9eb4da0b97cc9597b812f338d",
+16:47:52          "RepoDigests": [
+16:47:52              "pan-eduard-student-api@sha256:a7300e6f3f53a1d05e3656e1ce1dd4518b0f5217664d03d24c5758c723d30295"
+16:47:52          ],
+16:47:52          "RepoTags": [
+16:47:52              "pan-eduard-student-api:v1.0-pan-eduard"
+16:47:52          ],
+16:47:52          "RootFS": {
+16:47:52              "Layers": [
+16:47:52                  "sha256:5cac300e390e2fd748b258618f403b7813229929ad6de903b0c52a210a930824",
+16:47:52                  "sha256:5f4be2c3badedfd7149d008a4902427c98e708c70031dc19b4264160a545df19",
+16:47:52                  "sha256:fffc970145d3d80bebde72200c6cc5c98e259dd36aa736cbd8d6f6d35db9cb2b",
+16:47:52                  "sha256:5ae5ab4535f97667373158e2150216b53c621c9e0aa3d5dbd911dc6b6003658a",
+16:47:52                  "sha256:b98d126d8fe835ca1f9a9d84467f8cc5cbf15f85a316d050f2f473dbc500bb41",
+16:47:52                  "sha256:7afb7ab8bdb914e132b3476b983f07f1fb2bc101fb991a2d1327b63da4b81f8b",
+16:47:52                  "sha256:fa49754f34334569762efe6430e07f9d587ed5d0edce081efe9dc47df3192b54",
+16:47:52                  "sha256:e642769212f28d55e4f2839dd022778e5064eb02d4e061d3c752ac46acf984ee"
+16:47:52              ],
+16:47:52              "Type": "layers"
+16:47:52          },
+16:47:52          "Size": 160461755
+16:47:52      }
+16:47:52  ]
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Declarative: Post Actions)
+
+[Pipeline] archiveArtifacts
+16:47:52  Archiving artifacts
+16:47:52  Recording fingerprints
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // timestamps
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Finished: SUCCESS

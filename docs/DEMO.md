@@ -12,10 +12,10 @@
     git remote add origin https://github.com/YOUR_LOGIN/pan-eduard-student-api.git
     git push -u origin main
     git push origin feature/pan-eduard-crud feature/pan-eduard-documentation
-    git push origin v1.0-pan-eduard
+    git push origin v1.1-pan-eduard
     git remote -v
     git branch -a
-    git show v1.0-pan-eduard
+    git show v1.1-pan-eduard
 
 Email локального Git взят из существующей настройки пользователя. При необходимости изменить его до новых коммитов; пароль не включать в URL.
 
@@ -23,10 +23,10 @@ Email локального Git взят из существующей настр
 Создать .env по примеру, задать пароль, выполнить docker compose up -d --build.
 
     docker compose ps
-    docker image inspect pan-eduard-student-api:v1.0-pan-eduard --format '{{.Created}} {{.Size}}'
+    docker image inspect pan-eduard-student-api:v1.1-pan-eduard --format '{{.Created}} {{.Size}}'
     docker compose logs app
     docker inspect "$(docker compose ps -q app)"
-    docker compose exec app java -version
+    docker compose exec -T --interactive=false app java -version
     docker compose stop app
     docker compose start app
 
