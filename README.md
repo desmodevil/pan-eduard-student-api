@@ -34,3 +34,5 @@ Polling H/5 активируется после первого ручного з
 Учебный сервис без авторизации, доступ с хоста привязан к loopback. ddl-auto=update — для лабораторной; production требует миграций.
 .env исключён из Git: удаление пароля из файла не удаляет его из истории.
 Совместимость: https://docs.spring.io/spring-boot/3.5/system-requirements.html
+
+Feature Pan Eduard: GET /api/students returns records ordered by ID for reproducible demonstrations.
